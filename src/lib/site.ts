@@ -5,6 +5,6 @@ export const SITE = {
   whatsapp: '918320398022', // country code + number, digits only
   phoneDisplay: '+91 83203 98022',
   email: 'sereitynailsbyshruti1030@gmail.com',
-  instagram: 'serenity_nails.',
+  instagram: 'serenity__nails_',
   instagramUrl: 'https://www.instagram.com/serenity_nails./',
 };
