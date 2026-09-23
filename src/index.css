@@ -1,0 +1,65 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-burgundy: #290b10;
+  --color-wine: #5a1621;
+  --color-rose: #bd4a5a;
+  --color-rose-dark: #a33a4a;
+  --color-rose-light: #d6969c;
+  --color-blush: #f7efef;
+  --color-cream: #fff7f7;
+  --color-muted: #765f64;
+
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Jost', system-ui, sans-serif;
+  --font-script: 'Great Vibes', cursive;
+
+  --shadow-soft: 0 10px 30px -12px rgb(41 11 16 / 0.18);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream font-sans text-burgundy antialiased;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-serif;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-rose;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+@utility container-x {
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium tracking-wide transition duration-200 disabled:opacity-50;
+}
+@utility btn-primary {
+  @apply btn bg-wine text-white hover:bg-burgundy;
+}
+@utility btn-outline {
+  @apply btn border border-wine/40 text-wine hover:border-wine hover:bg-wine hover:text-white;
+}
+@utility btn-whatsapp {
+  @apply btn bg-[#1f8f4e] text-white hover:bg-[#177a41];
+}
+@utility input {
+  @apply w-full rounded-xl border border-rose-light/60 bg-white px-4 py-3 text-sm text-burgundy placeholder:text-muted/60 focus:border-rose focus:outline-none focus:ring-2 focus:ring-rose/20;
+}
+@utility chip {
+  @apply rounded-full border px-4 py-1.5 text-sm transition;
+}
+@utility eyebrow {
+  @apply font-script text-2xl text-rose;
+}
