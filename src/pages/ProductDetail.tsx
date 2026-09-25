@@ -40,11 +40,14 @@ function Detail({ product: p }: { product: NonNullable<ReturnType<typeof getProd
     description: p.description,
     image: p.images.map((id) => SITE.url + img(id, 1200)),
     brand: { '@type': 'Brand', name: SITE.name },
+    url: `${SITE.url}/products/${p.slug}`,
     offers: {
       '@type': 'Offer',
       priceCurrency: 'INR',
       price: p.price,
       availability: 'https://schema.org/InStock',
+      url: `${SITE.url}/products/${p.slug}`,
+      seller: { '@type': 'Organization', name: SITE.name },
     },
   };
 

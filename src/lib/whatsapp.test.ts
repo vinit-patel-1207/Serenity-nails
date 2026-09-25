@@ -6,7 +6,7 @@ assert.equal(formatPrice(1299), '₹1,299');
 const msg = orderMessage({ name: 'Rosé & Gold', price: 499, slug: 'rose-gold', quantity: 2, size: 'M' });
 assert.match(
   msg,
-  /Product: Rosé & Gold\nPrice: ₹499\nQuantity: 2\nSize: M\nLink: https:\/\/serenitynails\.in\/products\/rose-gold\n/,
+  /Product: Rosé & Gold\nPrice: ₹499\nQuantity: 2\nSize: M\nLink: https:\/\/serenitynails\.shop\/products\/rose-gold\n/,
 );
 assert.doesNotMatch(orderMessage({ name: 'X', price: 1 }), /Size|Link/);
 const url = new URL(whatsappLink(msg));

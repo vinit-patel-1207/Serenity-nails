@@ -26,6 +26,10 @@ export default function Seo({ title, description, image = '/og-image.jpg', jsonL
     setMeta('property', 'og:description', description);
     setMeta('property', 'og:url', url);
     setMeta('property', 'og:image', SITE.url + image);
+    setMeta('property', 'og:image:alt', `${full} product image`);
+    setMeta('name', 'twitter:title', full);
+    setMeta('name', 'twitter:description', description);
+    setMeta('name', 'twitter:image', SITE.url + image);
     let link = document.head.querySelector<HTMLLinkElement>('link[rel="canonical"]');
     if (!link) {
       link = document.createElement('link');

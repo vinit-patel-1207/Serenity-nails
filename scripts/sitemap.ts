@@ -2,7 +2,7 @@
 import { writeFileSync } from 'node:fs';
 import { products } from '../src/data/products.ts';
 
-const BASE = 'https://serenitynails.in'; // keep in sync with src/lib/site.ts
+const BASE = 'https://serenitynails.shop'; // keep in sync with src/lib/site.ts
 const paths = ['/', '/about', '/nail-designs', '/products', '/contact', ...products.map((p) => `/products/${p.slug}`)];
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
