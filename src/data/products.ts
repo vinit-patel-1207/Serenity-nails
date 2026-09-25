@@ -338,17 +338,6 @@ export const products: Product[] = [
     images: ['20260924_192227', '20260924_192358'],
   },
   {
-    slug: 'petal-pink',
-    name: 'Petal Pink',
-    tagline: 'Pretty pink with a delicate finish',
-    description: 'A soft pink set with delicate detail and a fresh, feminine finish.',
-    price: 550,
-    mrp: 750,
-    category: 'Floral',
-    shape: 'Almond',
-    images: ['20260924_192444', '20260924_192452'],
-  },
-  {
     slug: 'ruby-ribbon',
     name: 'Ruby Ribbon',
     tagline: 'Rich ruby tones with a refined accent',
@@ -357,7 +346,7 @@ export const products: Product[] = [
     mrp: 750,
     category: 'Bridal',
     shape: 'Almond',
-    images: ['20260924_192505', '20260924_192647'],
+    images: ['20260924_192444', '20260924_192452', '20260924_192505', '20260924_192647'],
   },
 ];
 
