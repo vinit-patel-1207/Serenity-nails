@@ -194,8 +194,8 @@ function Header() {
 function Footer() {
   return (
     <footer className="bg-burgundy text-white/80">
-      <div className="max-w-7xl mx-auto grid gap-2 py-14 sm:grid-cols-2 lg:grid-cols-5">
-        <div className="lg:col-span-2">
+      <div className="container-x grid gap-10 md:gap-2 py-14 sm:grid-cols-2 lg:grid-cols-5 lg:gap-8">
+        <div className="min-w-0 lg:col-span-2">
           <p className="font-serif text-3xl text-white">Serenity Nails</p>
           <p className="mt-1 font-script text-2xl text-rose-light">Beautiful Nails, Happier You</p>
           <p className="mt-4 max-w-sm text-sm leading-relaxed">
@@ -203,7 +203,7 @@ function Footer() {
             easily on WhatsApp.
           </p>
         </div>
-        <div>
+        <div className="min-w-0">
           <h2 className="font-sans text-sm font-semibold tracking-widest text-white uppercase">
             Quick Links
           </h2>
@@ -217,7 +217,7 @@ function Footer() {
             ))}
           </ul>
         </div>
-        <div>
+        <div className="min-w-0">
           <h2 className="font-sans text-sm font-semibold tracking-widest text-white uppercase">Shop</h2>
           <ul className="mt-4 space-y-2 text-sm">
             {['Bridal', 'Glam', 'Chrome', 'Floral', 'Minimal'].map((c) => (
@@ -229,7 +229,7 @@ function Footer() {
             ))}
           </ul>
         </div>
-        <div>
+        <div className="min-w-0">
           <h2 className="font-sans text-sm font-semibold tracking-widest text-white uppercase">
             Get in Touch
           </h2>
@@ -240,8 +240,8 @@ function Footer() {
               </a>
             </li>
             <li>
-              <a href={`mailto:${SITE.email}`} className="flex items-center gap-2 hover:text-rose-light">
-                <Mail className="size-4 shrink-0" aria-hidden />
+              <a href={`mailto:${SITE.email}`} className="flex items-start gap-2 hover:text-rose-light">
+                <Mail className="mt-0.5 size-4 shrink-0" aria-hidden />
                 <span className="break-all">{SITE.email}</span>
               </a>
             </li>
