@@ -1,4 +1,4 @@
-import { Search, SearchX } from 'lucide-react';
+import { ChevronDown, Search, SearchX } from 'lucide-react';
 import { useSearchParams } from 'react-router';
 import ProductCard from '../components/ProductCard.tsx';
 import Seo from '../components/Seo.tsx';
@@ -89,32 +89,44 @@ export default function Products() {
             <label className="sr-only" htmlFor="shape">
               Shape
             </label>
-            <select
-              id="shape"
-              value={shape}
-              onChange={(e) => set('shape', e.target.value)}
-              className="input w-auto"
-            >
-              <option value="">All shapes</option>
-              {SHAPES.map((s) => (
-                <option key={s}>{s}</option>
-              ))}
-            </select>
+            <div className="relative">
+              <select
+                id="shape"
+                value={shape}
+                onChange={(e) => set('shape', e.target.value)}
+                className="input w-auto appearance-none pr-9"
+              >
+                <option value="">All shapes</option>
+                {SHAPES.map((s) => (
+                  <option key={s}>{s}</option>
+                ))}
+              </select>
+              <ChevronDown
+                className="pointer-events-none absolute top-1/2 right-3 size-4 -translate-y-1/2 text-muted"
+                aria-hidden
+              />
+            </div>
             <label className="sr-only" htmlFor="sort">
               Sort by
             </label>
-            <select
-              id="sort"
-              value={sort}
-              onChange={(e) => set('sort', e.target.value === 'featured' ? '' : e.target.value)}
-              className="input w-auto"
-            >
-              {Object.entries(SORTS).map(([v, l]) => (
-                <option key={v} value={v}>
-                  {l}
-                </option>
-              ))}
-            </select>
+            <div className="relative">
+              <select
+                id="sort"
+                value={sort}
+                onChange={(e) => set('sort', e.target.value === 'featured' ? '' : e.target.value)}
+                className="input w-auto appearance-none pr-9"
+              >
+                {Object.entries(SORTS).map(([v, l]) => (
+                  <option key={v} value={v}>
+                    {l}
+                  </option>
+                ))}
+              </select>
+              <ChevronDown
+                className="pointer-events-none absolute top-1/2 right-3 size-4 -translate-y-1/2 text-muted"
+                aria-hidden
+              />
+            </div>
           </div>
         </div>
 

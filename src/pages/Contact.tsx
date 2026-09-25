@@ -1,5 +1,5 @@
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Mail, Phone } from 'lucide-react';
+import { ChevronDown, Mail, Phone } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { InstagramIcon, WhatsAppIcon } from '../components/BrandIcons.tsx';
@@ -101,14 +101,20 @@ export default function Contact() {
             <label htmlFor="topic" className="text-sm font-medium">
               Topic
             </label>
-            <select id="topic" className="input mt-2" {...register('topic')}>
-              <option>General enquiry</option>
-              <option>Custom design</option>
-              <option>Sizing help</option>
-              {products.map((p) => (
-                <option key={p.slug}>Order: {p.name}</option>
-              ))}
-            </select>
+            <div className="relative mt-2">
+              <select id="topic" className="input appearance-none pr-9" {...register('topic')}>
+                <option>General enquiry</option>
+                <option>Custom design</option>
+                <option>Sizing help</option>
+                {products.map((p) => (
+                  <option key={p.slug}>Order: {p.name}</option>
+                ))}
+              </select>
+              <ChevronDown
+                className="pointer-events-none absolute top-1/2 right-3 size-4 -translate-y-1/2 text-muted"
+                aria-hidden
+              />
+            </div>
           </div>
           <div>
             <label htmlFor="message" className="text-sm font-medium">
