@@ -335,7 +335,7 @@ export const products: Product[] = [
     mrp: 750,
     category: 'Nude',
     shape: 'Almond',
-    images: ['20260924_192227', '20260924_192358'],
+    images: ['20260924_192227', '20260924_192358', '20260924_192237', '20260924_192246'],
   },
   {
     slug: 'ruby-ribbon',
@@ -357,18 +357,7 @@ export const products: Product[] = [
     mrp: 1000,
     category: 'Bridal',
     shape: 'Almond',
-    images: ['20260924_192036', '20260924_192041'],
-  },
-  {
-    slug: 'raspberry-crush',
-    name: 'Raspberry Crush',
-    tagline: 'Bold berry colour with glossy shine',
-    description: 'A rich berry-toned set with glossy shine and an effortlessly confident finish.',
-    price: 700,
-    mrp: 1000,
-    category: 'Glam',
-    shape: 'Almond',
-    images: ['20260924_192206', '20260924_192227', '20260924_192237', '20260924_192246'],
+    images: ['20260924_192036', '20260924_192041', '20260924_192206'],
   },
   {
     slug: 'wine-gloss',
