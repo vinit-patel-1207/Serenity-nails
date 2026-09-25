@@ -411,18 +411,7 @@ export const products: Product[] = [
     mrp: 1000,
     category: 'Floral',
     shape: 'Almond',
-    images: ['20260924_192739'],
-  },
-  {
-    slug: 'berry-bloom',
-    name: 'Berry Bloom',
-    tagline: 'Berry colour with a soft floral mood',
-    description: 'A rich berry set with a soft floral mood and a glossy handcrafted finish.',
-    price: 700,
-    mrp: 1000,
-    category: 'Floral',
-    shape: 'Almond',
-    images: ['20260924_192743'],
+    images: ['20260924_192739', '20260924_192743'],
   },
 ];
 

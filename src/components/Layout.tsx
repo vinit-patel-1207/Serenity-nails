@@ -194,7 +194,7 @@ function Header() {
 function Footer() {
   return (
     <footer className="bg-burgundy text-white/80">
-      <div className="mx-8 grid gap-8 py-14 sm:grid-cols-2 lg:grid-cols-5">
+      <div className="max-w-7xl mx-auto grid gap-2 py-14 sm:grid-cols-2 lg:grid-cols-5">
         <div className="lg:col-span-2">
           <p className="font-serif text-3xl text-white">Serenity Nails</p>
           <p className="mt-1 font-script text-2xl text-rose-light">Beautiful Nails, Happier You</p>
