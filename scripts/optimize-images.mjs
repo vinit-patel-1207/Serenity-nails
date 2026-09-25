@@ -15,7 +15,7 @@ for (const f of fs.readdirSync('raw').filter((f) => /\.heic$/i.test(f))) {
 }
 
 for (const f of fs.readdirSync('raw').filter((f) => /\.jpe?g$/i.test(f))) {
-  const name = f.replace(/\.\w+$/, '');
+  const name = f.replace(/\.(?:jpe?g\.)?jpe?g$/i, '');
   for (const w of [600, 1200]) {
     await sharp(`raw/${f}`).rotate().resize(w, w, { fit: 'cover' }).webp({ quality: 78 }).toFile(`${out}/${name}-${w}.webp`);
   }
