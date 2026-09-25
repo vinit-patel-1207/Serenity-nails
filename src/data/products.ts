@@ -96,20 +96,8 @@ export const products: Product[] = [
     mrp: 699,
     category: 'Chrome',
     shape: 'Almond',
-    images: ['1000072591'],
+    images: ['1000072591', '1000072600'],
     featured: true,
-  },
-  {
-    slug: 'berry-marble-cat-eye',
-    name: 'Berry Marble Cat-Eye',
-    tagline: 'Marble swirls & velvet shimmer',
-    description:
-      'Berry and lavender marble swirls with velvet cat-eye nails. Dreamy, dimensional and softly glamorous.',
-    price: 500,
-    mrp: 699,
-    category: 'Glam',
-    shape: 'Almond',
-    images: ['1000072600'],
   },
   {
     slug: 'mocha-paisley',
